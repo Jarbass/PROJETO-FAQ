@@ -1,0 +1,32 @@
+//Colors Text
+$colorTitle: hsl(238, 29%, 16%);
+$colorHover: hsl(14, 88%, 65%);
+$colorQuestion: hsl(237, 12%, 33%);
+$colorAnswer: hsl(240, 6%, 50%);
+
+//Background Gradient
+$firstColor: hsl(273, 75%, 66%);
+$secondColor: hsl(240, 73%, 65%);
+
+//Color Divider
+$colorDivider: hsl(240, 5%, 91%);
+
+//Typography
+$fontSize: 12px;
+$font: 'Kumbh Sans', sans-serif;
+
+//Responsive
+$desktop: 1440px;
+$mobile: 450px;
+
+@mixin responsive($tela) {
+    @if $tela == desktop {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    } @else if $tela == mobile {
+        @media screen and (max-width: $mobile) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.faq {
+    width: 30%;
+    margin: 40px 0px;
+    padding-right: 130px;
+    font-family: $font;
+    font-size: $fontSize;
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 30px;
+        color: $colorTitle;
+        margin-bottom: 30px;
+    }
+
+    .tab-label {
+        color: $colorQuestion;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+            cursor: pointer;
+            color: $colorHover;
+        }
+
+        img {
+            height: 7px;
+            transition: .3s;
+        }
+    }
+
+    p {
+        color: $colorAnswer;
+        margin-top: 10px;
+        visibility: hidden;
+        height: 0;
+        text-align: initial;
+        transition: .3s;
+        opacity: 0;   
+    }
+
+    li {
+        margin-top: 20px;
+    }
+}
+
+//DIVISER
+.diviser {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $colorDivider;
+    margin: 10px 0px;
+}
+
+//ACCORDEON
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+input:checked {
+    ~ p {
+        height: 50px;
+        margin-top: 20px;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    ~ .tab-label {
+        font-weight: 700;
+
+        img {
+            transform: rotate(-180deg);
+        }
+    }
+
+}
+
+//MOBILE 
+@include responsive(mobile) {
+    .faq {
+        width: 80%;
+        padding-right: 0px;
+        margin-top: 130px;
+
+        h1 {
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 10px;
+        }
+    }
+}

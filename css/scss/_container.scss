@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($firstColor, $secondColor);
+}
+
+@include responsive(mobile) {
+    .container {
+        position: relative;
+    }
+}
