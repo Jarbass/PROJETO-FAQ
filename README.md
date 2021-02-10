@@ -1,9 +1,12 @@
 # PROJETO-FAQ
 Uma página de perguntas e respostas que desenvolvi de acordo com o desafio no <b>Frontend Mentor</b>.
 
+### Desafio: Criar um accordion sem utilizar Javascript
+Concluído! :white_check_mark:
+
 ### Destop / Mobile 
 O projeto foi desenvolvido para duas telas, sendo elas: 
-- Desktop: 1440px
+- Desktop: 1440px 
 - Mobile: 450px
 
 ### Ferramentas Utilizadas
